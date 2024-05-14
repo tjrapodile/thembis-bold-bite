@@ -44,7 +44,7 @@ const NavBar = () => {
     // If there are no errors, make a POST request to the backend
     if (Object.keys(errors).length === 0) {
       try {
-        const response = await axios.post('/user/signup', signupForm);
+        const response = await axios.post('https://thembis-bold-bite-bazaar-ea2870384a99.herokuapp.com/user/signup', signupForm);
         console.log(response.data); // Assuming the response contains success message
         setShowSignupModal(false); // Close the modal on successful signup
       } catch (error) {
